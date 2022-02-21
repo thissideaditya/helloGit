@@ -19,6 +19,18 @@ When you have to push code on github(only for first time){
     Step 3 : git push -u origin main
 
     origin is name for link of github repo
+    One error will come with text -> main -> main (fetch first), Then
+    Step 1 : git fetch origin main
+    Step 2 : git merge origin main
+    Then,
+    Step 1 : git fetch origin main:tmp
+    Step 2 : git rebase tmp
+    Step 3 : git push origin HEAD:main
+    Step 4 : git branch -D tmp
+}
+
+To delete existing local repository{
+    command = rm -rf .git
 }
 
 to ignore files from showing(hiding from public) on github{
